@@ -20,7 +20,6 @@ Pour lancer les tests, l'utilisateur doit rentrer les commandes suivantes:</br>
 
 *node test/user_interface/nom_du_test*
 
-
 <h3>Issues</h3>
 
 Les issues réalisées pour cette release sont les suivantes:
