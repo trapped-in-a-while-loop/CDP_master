@@ -1,0 +1,25 @@
+version: '3'
+
+services:
+  app:
+    container_name: app
+    restart: always
+    build: 
+      context: .
+    ports:
+      - "3000:3000"
+    links:
+     - mongo
+    volumes:
+      - ./:/usr/src/app
+      - /usr/src/app/node_modules
+  
+  mongo:
+    container_name: mongo
+    image: mongo
+    environment:
+      - MONGO_INITDB_DATABASE=database
+      - MONGO_INITDB_ROOT_USERNAME=root
+      - MONGO_INITDB_ROOT_PASSWORD=pwd
+    ports:
+      - "27017:27017"
